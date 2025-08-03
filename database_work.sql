@@ -40,7 +40,10 @@ FROM employees;
     INITCAP(split_part(split_part(email, '@', 1), '.', 1))
   ) AS formatted_name
 FROM employees;
-15.
+15.SELECT column_name
+FROM information_schema.columns
+
+WHERE table_name = 'your_table';
 16.SELECT 
   employee_id,
   first_name,
@@ -296,6 +299,3 @@ FROM employees;
     ELSE 'Not Anniversary Month'
   END AS anniversary_status
 FROM employees;
-51.SELECT column_name
-FROM information_schema.columns
-WHERE table_name = 'your_table';
